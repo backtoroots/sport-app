@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/rules_item"
+        android:icon="@drawable/ic_rules"
+        android:title="Правила"/>
+    <item
+        android:id="@+id/players_item"
+        android:icon="@drawable/ic_player"
+        android:title="Игроки"/>
+    <item
+        android:id="@+id/gallery_item"
+        android:icon="@drawable/ic_gallery"
+        android:title="Галерея" />
+</menu>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="football_players_images">
+        <item>@drawable/football_player_messi</item>
+        <item>@drawable/football_player_ronaldo</item>
+        <item>@drawable/football_player_neimar</item>
+        <item>@drawable/football_player_mbape</item>
+        <item>@drawable/football_player_ibragimovich</item>
+        <item>@drawable/football_player_suares</item>
+        <item>@drawable/football_player_golovin</item>
+        <item>@drawable/football_player_akinfeev</item>
+        <item>@drawable/football_player_livandovski</item>
+        <item>@drawable/football_player_ozil</item>
+    </array>
+
+    <array name="basketball_players_images">
+        <item>@drawable/basketball_player_lebron</item>
+        <item>@drawable/basketball_player_karri</item>
+        <item>@drawable/basketball_player_harden</item>
+        <item>@drawable/basketball_player_braiant</item>
+        <item>@drawable/basketball_player_irving</item>
+        <item>@drawable/basketball_player_derant</item>
+        <item>@drawable/basketball_player_lenard</item>
+        <item>@drawable/basketball_player_donich</item>
+        <item>@drawable/basketball_player_eastbruk</item>
+        <item>@drawable/basketball_player_adetokumbo</item>
+    </array>
+
+    <array name="tennis_players_images">
+        <item>@drawable/tennis_player_sharapova</item>
+        <item>@drawable/tennis_player_federer</item>
+        <item>@drawable/tennis_player_nadal</item>
+        <item>@drawable/tennis_player_jokovich</item>
+        <item>@drawable/tennis_player_azarenko</item>
+        <item>@drawable/tennis_player_medvedev</item>
+        <item>@drawable/tennis_player_ivanovich</item>
+        <item>@drawable/tennis_player_marrey</item>
+        <item>@drawable/tennis_player_safin</item>
+        <item>@drawable/tennis_player_vavrinka</item>
+    </array>
+
+    <array name="handball_players_images">
+        <item>@drawable/handball_player_trefilov</item>
+        <item>@drawable/handball_player_vichereva</item>
+        <item>@drawable/handball_player_igropulo</item>
+        <item>@drawable/handball_player_ilina</item>
+        <item>@drawable/handball_player_dibirov</item>
+        <item>@drawable/handball_player_turei</item>
+        <item>@drawable/handball_player_rachiteleva</item>
+        <item>@drawable/handball_player_korolek</item>
+        <item>@drawable/handball_player_kulesh</item>
+        <item>@drawable/handball_player_puhovskia</item>
+    </array>
+
+</resources>

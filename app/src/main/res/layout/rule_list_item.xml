@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<!--        TODO change to be beautiful-->
+
+        <TextView
+            android:id="@+id/ruleTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:padding="16dp"
+            android:text="sdfsdfs"
+            android:textSize="26sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/arrowFolded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:padding="16dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_left_24" />
+
+        <ImageButton
+            android:id="@+id/arrowExpanded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:padding="16dp"
+            android:visibility="gone"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ruleContentContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/ruleTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/ruleContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="Внутри спрятанного дома лежит очень много текста где же его весь хранить? непонятно. Дерзай, у тебя все получится"
+                    android:textSize="22sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
+
