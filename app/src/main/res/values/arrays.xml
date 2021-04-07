@@ -59,4 +59,30 @@
         <item>@drawable/handball_player_puhovskia</item>
     </array>
 
+    <array name="gallery_football">
+        <item>@drawable/gallery_football_1</item>
+        <item>@drawable/gallery_football_2</item>
+        <item>@drawable/gallery_football_3</item>
+        <item>@drawable/gallery_football_4</item>
+        <item>@drawable/gallery_football_5</item>
+        <item>@drawable/gallery_football_6</item>
+        <item>@drawable/gallery_football_7</item>
+        <item>@drawable/gallery_football_8</item>
+        <item>@drawable/gallery_football_9</item>
+        <item>@drawable/gallery_football_10</item>
+    </array>
+
+    <array name="gallery_basketball">
+        <item>@drawable/gallery_basketball_1</item>
+        <item>@drawable/gallery_basketball_2</item>
+        <item>@drawable/gallery_basketball_3</item>
+        <item>@drawable/gallery_basketball_4</item>
+        <item>@drawable/gallery_basketball_5</item>
+        <item>@drawable/gallery_basketball_6</item>
+        <item>@drawable/gallery_basketball_7</item>
+        <item>@drawable/gallery_basketball_8</item>
+        <item>@drawable/gallery_basketball_9</item>
+        <item>@drawable/gallery_basketball_10</item>
+    </array>
+
 </resources>

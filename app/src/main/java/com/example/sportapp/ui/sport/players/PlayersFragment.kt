@@ -42,7 +42,7 @@ class PlayersFragment : Fragment() {
             SportsGamesTypes.TENNIS -> getString(R.string.tennis_players)
             SportsGamesTypes.HANDBALL -> getString(R.string.handball_players)
         }
-
+        
         binding.playersRecyclerView.layoutManager = LinearLayoutManager(activity)
         binding.playersRecyclerView.adapter = adapter
 
