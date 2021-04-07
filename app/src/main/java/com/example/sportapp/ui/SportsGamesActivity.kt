@@ -40,6 +40,7 @@ class SportsGamesActivity : AppCompatActivity(), SportsGamesRecyclerAdapter.OnSp
 //            qwe.setBounds(Rect)
             sportsGames.add(SportGame(sportsGamesType, images.getDrawable(index)!!))
         }
+        images.recycle()
     }
 
     private fun navigate(sport: SportsGamesTypes) {

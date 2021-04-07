@@ -7,21 +7,19 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sportapp.*
 import com.example.sportapp.databinding.FragmentGalleryBinding
-import com.example.sportapp.databinding.FragmentRulesBinding
-import com.example.sportapp.ui.sport.rules.RulesRecyclerAdapter
 import java.util.*
 
 class GalleryFragment : Fragment() {
     private lateinit var sportGame: SportsGamesTypes
     private val images = mutableListOf<Drawable>()
-    lateinit var adapter: GalleryRecyclerAdapter
+    private lateinit var adapter: GalleryRecyclerAdapter
     private var _binding: FragmentGalleryBinding? = null
     private val binding get() = _binding!!
+    private val numberOfGridColumns = 3
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,34 +41,33 @@ class GalleryFragment : Fragment() {
 
         activity?.title = "Галерея (${sportGame?.russianName?.toLowerCase(Locale.getDefault())})"
 
-        binding.galleryRecyclerView.layoutManager = GridLayoutManager(activity, 3, LinearLayoutManager.VERTICAL, false)
-        binding.galleryRecyclerView.addItemDecoration(VerticalSpacingItemDecorator(10))
+        binding.galleryRecyclerView.layoutManager = GridLayoutManager(activity, numberOfGridColumns, LinearLayoutManager.VERTICAL, false)
+        binding.galleryRecyclerView.addItemDecoration(GridImagesItemDecorator(10, numberOfGridColumns))
         binding.galleryRecyclerView.adapter = adapter
 
         return binding.root
     }
 
-    fun setImages() {
-        lateinit var drawables: TypedArray
-        when (sportGame) {
+    private fun setImages() {
+        val drawables: TypedArray = when (sportGame) {
             SportsGamesTypes.FOOTBALL -> {
-                drawables = resources.obtainTypedArray(R.array.gallery_football)
+                resources.obtainTypedArray(R.array.gallery_football)
             }
             SportsGamesTypes.BASKETBALL -> {
-                drawables = resources.obtainTypedArray(R.array.gallery_basketball)
+                resources.obtainTypedArray(R.array.gallery_basketball)
             }
             SportsGamesTypes.TENNIS -> {
-                drawables = resources.obtainTypedArray(R.array.gallery_football) // TODO add photos and change
+                resources.obtainTypedArray(R.array.gallery_tennis)
             }
             SportsGamesTypes.HANDBALL -> {
-                drawables = resources.obtainTypedArray(R.array.gallery_football) // TODO add photos and change
+                resources.obtainTypedArray(R.array.gallery_handball)
             }
         }
-
-        drawables.length()
 
         for (i in 0 until drawables.length()) {
             images.add(drawables.getDrawable(i)!!)
         }
+
+        drawables.recycle()
     }
 }

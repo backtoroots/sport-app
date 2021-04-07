@@ -85,4 +85,30 @@
         <item>@drawable/gallery_basketball_10</item>
     </array>
 
+    <array name="gallery_tennis">
+        <item>@drawable/gallery_tennis_1</item>
+        <item>@drawable/gallery_tennis_2</item>
+        <item>@drawable/gallery_tennis_3</item>
+        <item>@drawable/gallery_tennis_4</item>
+        <item>@drawable/gallery_tennis_5</item>
+        <item>@drawable/gallery_tennis_6</item>
+        <item>@drawable/gallery_tennis_7</item>
+        <item>@drawable/gallery_tennis_8</item>
+        <item>@drawable/gallery_tennis_9</item>
+        <item>@drawable/gallery_tennis_10</item>
+    </array>
+
+    <array name="gallery_handball">
+        <item>@drawable/gallery_handball_1</item>
+        <item>@drawable/gallery_handball_2</item>
+        <item>@drawable/gallery_handball_3</item>
+        <item>@drawable/gallery_handball_4</item>
+        <item>@drawable/gallery_handball_5</item>
+        <item>@drawable/gallery_handball_6</item>
+        <item>@drawable/gallery_handball_7</item>
+        <item>@drawable/gallery_handball_8</item>
+        <item>@drawable/gallery_handball_9</item>
+        <item>@drawable/gallery_handball_10</item>
+    </array>
+
 </resources>

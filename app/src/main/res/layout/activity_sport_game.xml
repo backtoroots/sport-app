@@ -26,7 +26,6 @@
         android:layout_height="wrap_content"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         />
-    <!--    TODO replace with more elegant margin solution-->
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -36,8 +35,6 @@
         android:layout_gravity="bottom"
         app:layout_behavior="com.example.sportapp.BottomNavigationBehavior"
         />
-        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
-
 
     <!--        android:background="@color/colorBottomNavigation"-->
     <!--    app:itemTextColor="@android:color/white"-->

@@ -1,6 +1,7 @@
 package com.example.sportapp.ui.sport
 
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.view.MenuItem
 import android.view.Window
 import androidx.appcompat.app.AppCompatActivity
@@ -20,6 +21,7 @@ class SportGameActivity : AppCompatActivity(),
     private lateinit var binding: ActivitySportGameBinding
     private val sportName by lazy { intent.getStringExtra(getString(R.string.sportKeyName)) }
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -32,8 +34,10 @@ class SportGameActivity : AppCompatActivity(),
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        supportFragmentManager.beginTransaction()
-            .replace(binding.fragmentContainer.id, getFragmentWithBundle(RulesFragment())).commit()
+        supportFragmentManager
+            .beginTransaction()
+            .replace(binding.fragmentContainer.id, getFragmentWithBundle(RulesFragment()))
+            .commit()
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -63,5 +67,9 @@ class SportGameActivity : AppCompatActivity(),
         bundle.putString(getString(R.string.sportKeyName), sportName)
         fragment.arguments = bundle
         return fragment
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
     }
 }

@@ -61,10 +61,10 @@ class PlayersFragment : Fragment() {
         when (sportGame) {
             SportsGamesTypes.FOOTBALL -> {
                 names = resources.getStringArray(R.array.football_players_names)
-                images = resources.obtainTypedArray(R.array.football_players_images) // TODO something with recycle
+                images = resources.obtainTypedArray(R.array.football_players_images)
             }
             SportsGamesTypes.BASKETBALL -> {
-                names = resources.getStringArray(R.array.basketball_players_names) // TODO change resource
+                names = resources.getStringArray(R.array.basketball_players_names)
                 images = resources.obtainTypedArray(R.array.basketball_players_images)
             }
             SportsGamesTypes.TENNIS -> {
@@ -84,6 +84,6 @@ class PlayersFragment : Fragment() {
             }
             players.add(Player(splitName.first(), splitName.last(), images.getDrawable(i)!!))
         }
-
+        images.recycle()
     }
 }
