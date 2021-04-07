@@ -24,10 +24,7 @@ class GalleryFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        arguments?.let {
-            val sportName = it.getString(getString(R.string.sportKeyName))
-            sportGame = enumValueOf(sportName!!)
-        }
+        sportGame = arguments?.getSerializable(getString(R.string.sportTypeKey)) as SportsGamesTypes
 
         setImages()
         adapter = GalleryRecyclerAdapter(images)
@@ -39,7 +36,7 @@ class GalleryFragment : Fragment() {
     ): View? {
         _binding = FragmentGalleryBinding.inflate(inflater, container, false)
 
-        activity?.title = "Галерея (${sportGame?.russianName?.toLowerCase(Locale.getDefault())})"
+        activity?.title = "Галерея (${sportGame.russianName.toLowerCase(Locale.getDefault())})"
 
         binding.galleryRecyclerView.layoutManager = GridLayoutManager(activity, numberOfGridColumns, LinearLayoutManager.VERTICAL, false)
         binding.galleryRecyclerView.addItemDecoration(GridImagesItemDecorator(10, numberOfGridColumns))

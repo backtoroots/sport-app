@@ -6,7 +6,8 @@
     android:layout_height="wrap_content"
     android:layout_marginLeft="24dp"
     android:layout_marginTop="32dp"
-    android:layout_marginRight="24dp" >
+    android:layout_marginRight="24dp"
+    >
 
 
     <LinearLayout
@@ -28,17 +29,6 @@
             android:gravity="center"
             android:text="Футбол"
             android:textSize="26sp" />
-
-<!--        TODO compoundDrawable-->
-        <!--            <TextView-->
-        <!--                android:id="@+id/sportGameContent"-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="match_parent"-->
-        <!--                android:layout_margin="16dp"-->
-        <!--                android:gravity="center"-->
-        <!--                android:text="Футбол"-->
-        <!--                android:textSize="26sp"-->
-        <!--                app:drawableLeftCompat="@drawable/ic_football" />-->
 
     </LinearLayout>
 

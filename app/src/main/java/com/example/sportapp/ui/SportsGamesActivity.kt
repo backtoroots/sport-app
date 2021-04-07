@@ -45,14 +45,14 @@ class SportsGamesActivity : AppCompatActivity(), SportsGamesRecyclerAdapter.OnSp
 
     private fun navigate(sport: SportsGamesTypes) {
         val intent = Intent(this, SportGameActivity::class.java)
-        intent.putExtra(getString(R.string.sportKeyName), sport.name)
+        intent.putExtra(getString(R.string.sportTypeKey), sport.name)
         startActivity(intent)
     }
 
     override fun onSportGameClick(position: Int) {
         val sportGame = sportsGames[position]
         val intent = Intent(this, SportGameActivity::class.java)
-        intent.putExtra(getString(R.string.sportKeyName), sportGame.sportGameType.name)
+        intent.putExtra(getString(R.string.sportTypeKey), sportGame.sportGameType)
         startActivity(intent)
     }
 }

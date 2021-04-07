@@ -23,10 +23,7 @@ class RulesFragment : Fragment(), RulesRecyclerAdapter.OnRuleTitleListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        arguments?.let { bundle ->
-            val sportName = bundle.getString(getString(R.string.sportKeyName))
-            sportGame = enumValueOf(sportName!!)
-        }
+        sportGame = arguments?.getSerializable(getString(R.string.sportTypeKey)) as SportsGamesTypes
 
         setRuleItems()
         adapter = RulesRecyclerAdapter(rules, this)
@@ -38,7 +35,7 @@ class RulesFragment : Fragment(), RulesRecyclerAdapter.OnRuleTitleListener {
     ): View? {
         _binding = FragmentRulesBinding.inflate(inflater, container, false)
         activity?.title =
-            "Правила игры в ${sportGame?.russianName?.toLowerCase(Locale.getDefault())}"
+            "Правила игры в ${sportGame.russianName.toLowerCase(Locale.getDefault())}"
 
         binding.rulesRecyclerView.layoutManager = LinearLayoutManager(activity)
         binding.rulesRecyclerView.adapter = adapter

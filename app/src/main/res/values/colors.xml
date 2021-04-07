@@ -5,4 +5,5 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="colorCustom">#dbbf30</color>
     <color name="colorBottomNavigation">#5E0FCF</color>
+    <color name="splashScreenColor">#ABBAAB</color>
 </resources>

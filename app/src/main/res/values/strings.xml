@@ -1,10 +1,15 @@
 <resources>
     <string name="app_name">Sport app</string>
-    <string name="sportKeyName">sport</string>
+    <string name="sportTypeKey">sportType</string>
+    <string name="fragmentTypeKey">fragmentTypeKey</string>
     <string name="footballers">Футболисты</string>
     <string name="basketball_players">Баскетболисты</string>
     <string name="tennis_players">Теннисисты</string>
     <string name="handball_players">Гандболисты</string>
+
+    <string name="ruleFragmentTag">ruleFragmentTag</string>
+    <string name="playersFragmentTag">playersFragmentTag</string>
+    <string name="galleryFragmentTag">galleryFragmentTag</string>
 
     <string-array name="football_titles">
         <item>Общие описание</item>

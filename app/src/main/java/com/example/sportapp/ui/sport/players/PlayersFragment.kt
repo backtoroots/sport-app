@@ -22,10 +22,7 @@ class PlayersFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        arguments?.let { bundle ->
-            val sportName = bundle.getString(getString(R.string.sportKeyName))
-            sportGame = enumValueOf(sportName!!)
-        }
+        sportGame = arguments?.getSerializable(getString(R.string.sportTypeKey)) as SportsGamesTypes
 
         setPlayers()
         adapter = PlayersRecyclerAdapter(players)
