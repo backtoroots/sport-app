@@ -17,7 +17,7 @@ class SportsGamesRecyclerAdapter(
         private val onSportGameListener: OnSportGameListener
     ) : RecyclerView.ViewHolder(binding.root), View.OnClickListener {
         init {
-            binding.sportGameContent.setOnClickListener(this)
+            binding.card.setOnClickListener(this)
         }
 
         override fun onClick(p0: View?) {
