@@ -4,13 +4,13 @@
     <item
         android:id="@+id/rules_item"
         android:icon="@drawable/ic_rules"
-        android:title="Правила"/>
+        android:title="@string/bottomMenuRules"/>
     <item
         android:id="@+id/players_item"
         android:icon="@drawable/ic_player"
-        android:title="Игроки"/>
+        android:title="@string/bottomMenuPlayers"/>
     <item
         android:id="@+id/gallery_item"
         android:icon="@drawable/ic_gallery"
-        android:title="Галерея" />
+        android:title="@string/bottomMenuGallery" />
 </menu>

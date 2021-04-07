@@ -10,6 +10,9 @@
     <string name="ruleFragmentTag">ruleFragmentTag</string>
     <string name="playersFragmentTag">playersFragmentTag</string>
     <string name="galleryFragmentTag">galleryFragmentTag</string>
+    <string name="bottomMenuRules">Правила</string>
+    <string name="bottomMenuPlayers">Игроки</string>
+    <string name="bottomMenuGallery">Галерея</string>
 
     <string-array name="football_titles">
         <item>Общие описание</item>

@@ -19,7 +19,6 @@ class RulesRecyclerAdapter(
             binding.ruleTitle.setOnClickListener(this)
             binding.arrowFolded.setOnClickListener(this)
             binding.arrowExpanded.setOnClickListener(this)
-// TODO if last element expanded, it's content is invisible. Scroll to this content
         }
 
         override fun onClick(p0: View?) {

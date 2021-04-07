@@ -36,17 +36,9 @@ class SportsGamesActivity : AppCompatActivity(), SportsGamesRecyclerAdapter.OnSp
         val images: TypedArray = resources.obtainTypedArray(R.array.sports_games_images)
 
         SportsGamesTypes.values().forEachIndexed { index, sportsGamesType ->
-//            val qwe = images.getDrawable(index)!!
-//            qwe.setBounds(Rect)
             sportsGames.add(SportGame(sportsGamesType, images.getDrawable(index)!!))
         }
         images.recycle()
-    }
-
-    private fun navigate(sport: SportsGamesTypes) {
-        val intent = Intent(this, SportGameActivity::class.java)
-        intent.putExtra(getString(R.string.sportTypeKey), sport.name)
-        startActivity(intent)
     }
 
     override fun onSportGameClick(position: Int) {

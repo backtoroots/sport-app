@@ -11,7 +11,6 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-<!--        TODO change to be beautiful-->
 
         <TextView
             android:id="@+id/ruleTitle"
@@ -19,7 +18,7 @@
             android:layout_height="wrap_content"
             android:lines="1"
             android:padding="16dp"
-            android:text="sdfsdfs"
+            android:text="Правило"
             android:textSize="26sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -58,7 +57,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="16dp"
-                    android:text="Внутри спрятанного дома лежит очень много текста где же его весь хранить? непонятно. Дерзай, у тебя все получится"
+                    android:text="Очень длинное содержимое правила"
                     android:textSize="22sp"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"/>
