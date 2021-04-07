@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <array name="sports_games_images">
+        <item>@drawable/ic_football</item>
+        <item>@drawable/ic_basketball</item>
+        <item>@drawable/ic_tennis</item>
+        <item>@drawable/ic_handball</item>
+    </array>
+
     <array name="football_players_images">
         <item>@drawable/football_player_messi</item>
         <item>@drawable/football_player_ronaldo</item>

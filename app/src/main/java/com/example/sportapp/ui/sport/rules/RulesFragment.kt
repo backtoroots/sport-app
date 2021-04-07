@@ -9,12 +9,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sportapp.R
 import com.example.sportapp.Rule
 import com.example.sportapp.RuleListItem
-import com.example.sportapp.SportsGame
+import com.example.sportapp.SportsGamesTypes
 import com.example.sportapp.databinding.FragmentRulesBinding
 import java.util.*
 
 class RulesFragment : Fragment(), RulesRecyclerAdapter.OnRuleTitleListener {
-    private lateinit var sportGame: SportsGame
+    private lateinit var sportGame: SportsGamesTypes
     private val rules = mutableListOf<RuleListItem>()
     lateinit var adapter: RulesRecyclerAdapter
     private var _binding: FragmentRulesBinding? = null
@@ -60,19 +60,19 @@ class RulesFragment : Fragment(), RulesRecyclerAdapter.OnRuleTitleListener {
         var titles: Array<String> = arrayOf()
         var contents: Array<String> = arrayOf()
         when (sportGame) {
-            SportsGame.FOOTBALL -> {
+            SportsGamesTypes.FOOTBALL -> {
                 titles = resources.getStringArray(R.array.football_titles)
                 contents = resources.getStringArray(R.array.football_contents)
             }
-            SportsGame.BASKETBALL -> {
+            SportsGamesTypes.BASKETBALL -> {
                 titles = resources.getStringArray(R.array.basketball_titles)
                 contents = resources.getStringArray(R.array.basketball_contents)
             }
-            SportsGame.TENNIS -> {
+            SportsGamesTypes.TENNIS -> {
                 titles = resources.getStringArray(R.array.tennis_titles)
                 contents = resources.getStringArray(R.array.tennis_contents)
             }
-            SportsGame.HANDBALL -> {
+            SportsGamesTypes.HANDBALL -> {
                 titles = resources.getStringArray(R.array.handball_titles)
                 contents = resources.getStringArray(R.array.handball_contents)
             }

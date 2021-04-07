@@ -1,16 +1,21 @@
 package com.example.sportapp.ui
 
 import android.content.Intent
+import android.content.res.TypedArray
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sportapp.R
-import com.example.sportapp.SportsGame
+import com.example.sportapp.SportGame
+import com.example.sportapp.SportsGamesTypes
 import com.example.sportapp.databinding.ActivitySportsGamesBinding
 import com.example.sportapp.ui.sport.SportGameActivity
 
-class SportsGamesActivity : AppCompatActivity() {
+class SportsGamesActivity : AppCompatActivity(), SportsGamesRecyclerAdapter.OnSportGameListener {
 
     private lateinit var binding: ActivitySportsGamesBinding
+    private val sportsGames = mutableListOf<SportGame>()
+    private lateinit var adapter: SportsGamesRecyclerAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,18 +24,34 @@ class SportsGamesActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        binding.footballCard.setOnClickListener { navigate(SportsGame.FOOTBALL) }
+        setSportsGames()
+        adapter = SportsGamesRecyclerAdapter(sportsGames, this)
 
-        binding.basketballCard.setOnClickListener { navigate(SportsGame.BASKETBALL) }
-
-        binding.tennisCard.setOnClickListener { navigate(SportsGame.TENNIS) }
-
-        binding.handballCard.setOnClickListener { navigate(SportsGame.HANDBALL) }
+        binding.toolbar.title = "Спортивные игры"
+        binding.sportGamesRecycler.layoutManager = LinearLayoutManager(this)
+        binding.sportGamesRecycler.adapter = adapter
     }
 
-    private fun navigate(sport: SportsGame) {
+    private fun setSportsGames() {
+        val images: TypedArray = resources.obtainTypedArray(R.array.sports_games_images)
+
+        SportsGamesTypes.values().forEachIndexed { index, sportsGamesType ->
+//            val qwe = images.getDrawable(index)!!
+//            qwe.setBounds(Rect)
+            sportsGames.add(SportGame(sportsGamesType, images.getDrawable(index)!!))
+        }
+    }
+
+    private fun navigate(sport: SportsGamesTypes) {
         val intent = Intent(this, SportGameActivity::class.java)
         intent.putExtra(getString(R.string.sportKeyName), sport.name)
+        startActivity(intent)
+    }
+
+    override fun onSportGameClick(position: Int) {
+        val sportGame = sportsGames[position]
+        val intent = Intent(this, SportGameActivity::class.java)
+        intent.putExtra(getString(R.string.sportKeyName), sportGame.sportGameType.name)
         startActivity(intent)
     }
 }
