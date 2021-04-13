@@ -7,6 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.sportapp.LinearItemDecorator
 import com.example.sportapp.Player
 import com.example.sportapp.R
 import com.example.sportapp.SportsGamesTypes
@@ -41,6 +43,7 @@ class PlayersFragment : Fragment() {
         }
         
         binding.playersRecyclerView.layoutManager = LinearLayoutManager(activity)
+        binding.playersRecyclerView.addItemDecoration(LinearItemDecorator(10))
         binding.playersRecyclerView.adapter = adapter
 
         return binding.root

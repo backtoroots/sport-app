@@ -4,7 +4,9 @@ import android.content.Intent
 import android.content.res.TypedArray
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.sportapp.GridImagesItemDecorator
 import com.example.sportapp.R
 import com.example.sportapp.SportGame
 import com.example.sportapp.SportsGamesTypes
@@ -13,6 +15,7 @@ import com.example.sportapp.ui.sport.SportGameActivity
 
 class SportsGamesActivity : AppCompatActivity(), SportsGamesRecyclerAdapter.OnSportGameListener {
 
+    private val numberOfGridColumns = 2
     private lateinit var binding: ActivitySportsGamesBinding
     private val sportsGames = mutableListOf<SportGame>()
     private lateinit var adapter: SportsGamesRecyclerAdapter
@@ -28,7 +31,8 @@ class SportsGamesActivity : AppCompatActivity(), SportsGamesRecyclerAdapter.OnSp
         adapter = SportsGamesRecyclerAdapter(sportsGames, this)
 
         binding.toolbar.title = "Спортивные игры"
-        binding.sportGamesRecycler.layoutManager = LinearLayoutManager(this)
+        binding.sportGamesRecycler.layoutManager = GridLayoutManager(this, numberOfGridColumns)
+        binding.sportGamesRecycler.addItemDecoration(GridImagesItemDecorator(10, numberOfGridColumns))
         binding.sportGamesRecycler.adapter = adapter
     }
 

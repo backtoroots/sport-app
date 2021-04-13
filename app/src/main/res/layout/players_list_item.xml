@@ -3,20 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="16dp"
-    app:cardBackgroundColor="@color/cardViewBackGroundColor"
     >
-<!--        <item name="cardBackgroundColor">@color/cardview_dark_background</item>-->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
-        <ImageView
+<!--       TODO Изменить дизайн: изображение в roundimageview? картинки почередовать слева/справа-->
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/playerPhoto"
             android:layout_width="128dp"
             android:layout_height="128dp"
+            android:layout_margin="8dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/football_player_messi"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FFFFFF"
+            />
 
         <TextView
             android:id="@+id/playerFirstName"
