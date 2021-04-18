@@ -7,11 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.sportapp.LinearItemDecorator
-import com.example.sportapp.Player
+import com.example.sportapp.ui.utils.LinearItemDecorator
+import com.example.sportapp.model.Player
 import com.example.sportapp.R
-import com.example.sportapp.SportsGamesTypes
+import com.example.sportapp.model.SportsGamesTypes
 import com.example.sportapp.databinding.FragmentPlayersBinding
 
 class PlayersFragment : Fragment() {
@@ -33,7 +32,7 @@ class PlayersFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentPlayersBinding.inflate(inflater, container, false)
         activity?.title = when (sportGame) {
             SportsGamesTypes.FOOTBALL -> getString(R.string.footballers)

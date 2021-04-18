@@ -33,6 +33,6 @@
         android:layout_height="wrap_content"
         app:menu="@menu/bottom_menu"
         android:layout_gravity="bottom"
-        app:layout_behavior="com.example.sportapp.BottomNavigationBehavior" />
+        app:layout_behavior="com.example.sportapp.ui.utils.BottomNavigationBehavior" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

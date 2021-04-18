@@ -1,4 +1,4 @@
-package com.example.sportapp
+package com.example.sportapp.model
 
 data class Rule(val title: String, val content: String)
 

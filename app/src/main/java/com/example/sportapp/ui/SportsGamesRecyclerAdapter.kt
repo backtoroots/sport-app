@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.sportapp.SportGame
+import com.example.sportapp.model.SportGame
 import com.example.sportapp.databinding.SportsGamesListItemBinding
 
 class SportsGamesRecyclerAdapter(

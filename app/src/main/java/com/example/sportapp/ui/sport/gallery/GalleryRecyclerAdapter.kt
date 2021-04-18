@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sportapp.databinding.GalleryGridItemBinding
 
-class GalleryRecyclerAdapter(val images: List<Drawable>): RecyclerView.Adapter<GalleryRecyclerAdapter.GalleryImageViewHolder>() {
+class GalleryRecyclerAdapter(private val images: List<Drawable>): RecyclerView.Adapter<GalleryRecyclerAdapter.GalleryImageViewHolder>() {
 
     class GalleryImageViewHolder(val binding: GalleryGridItemBinding): RecyclerView.ViewHolder(binding.root)
 

@@ -1,4 +1,4 @@
-package com.example.sportapp
+package com.example.sportapp.model
 
 import android.graphics.drawable.Drawable
 

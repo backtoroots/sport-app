@@ -4,7 +4,6 @@ import android.content.res.Configuration
 import android.content.res.TypedArray
 import android.graphics.drawable.Drawable
 import android.os.Bundle
-import android.transition.TransitionInflater
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -13,6 +12,8 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sportapp.*
 import com.example.sportapp.databinding.FragmentGalleryBinding
+import com.example.sportapp.model.SportsGamesTypes
+import com.example.sportapp.ui.utils.GridImagesItemDecorator
 import java.util.*
 
 class GalleryFragment : Fragment() {
@@ -34,7 +35,7 @@ class GalleryFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val numberOfGridColumns = if (resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT) 3 else 5
 
         _binding = FragmentGalleryBinding.inflate(inflater, container, false)
@@ -69,5 +70,10 @@ class GalleryFragment : Fragment() {
         }
 
         drawables.recycle()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

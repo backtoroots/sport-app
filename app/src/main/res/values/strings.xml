@@ -13,6 +13,7 @@
     <string name="bottomMenuRules">Правила</string>
     <string name="bottomMenuPlayers">Игроки</string>
     <string name="bottomMenuGallery">Галерея</string>
+    <string name="sportGames">Спортивные игры</string>
 
     <string-array name="football_titles">
         <item>Общие описание</item>

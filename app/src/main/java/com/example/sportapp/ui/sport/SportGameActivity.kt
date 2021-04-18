@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import com.example.sportapp.R
-import com.example.sportapp.SportsGamesTypes
+import com.example.sportapp.model.SportsGamesTypes
 import com.example.sportapp.databinding.ActivitySportGameBinding
 import com.example.sportapp.ui.sport.gallery.GalleryFragment
 import com.example.sportapp.ui.sport.players.PlayersFragment

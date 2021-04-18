@@ -1,4 +1,4 @@
-package com.example.sportapp
+package com.example.sportapp.ui.utils
 
 import android.graphics.Rect
 import android.view.View

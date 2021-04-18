@@ -1,13 +1,10 @@
 package com.example.sportapp.ui.sport.players
 
-import android.R
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.constraintlayout.widget.ConstraintSet
 import androidx.recyclerview.widget.RecyclerView
-import com.example.sportapp.Player
+import com.example.sportapp.model.Player
 import com.example.sportapp.databinding.PlayersListItemBinding
 
 

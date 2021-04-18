@@ -7,16 +7,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sportapp.R
-import com.example.sportapp.Rule
-import com.example.sportapp.RuleListItem
-import com.example.sportapp.SportsGamesTypes
+import com.example.sportapp.model.Rule
+import com.example.sportapp.model.RuleListItem
+import com.example.sportapp.model.SportsGamesTypes
 import com.example.sportapp.databinding.FragmentRulesBinding
 import java.util.*
 
 class RulesFragment : Fragment(), RulesRecyclerAdapter.OnRuleTitleListener {
     private lateinit var sportGame: SportsGamesTypes
     private val rules = mutableListOf<RuleListItem>()
-    lateinit var adapter: RulesRecyclerAdapter
+    private lateinit var adapter: RulesRecyclerAdapter
     private var _binding: FragmentRulesBinding? = null
     private val binding get() = _binding!!
 
@@ -32,7 +32,7 @@ class RulesFragment : Fragment(), RulesRecyclerAdapter.OnRuleTitleListener {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentRulesBinding.inflate(inflater, container, false)
         activity?.title =
             "Правила игры в ${sportGame.russianName.toLowerCase(Locale.getDefault())}"

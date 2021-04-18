@@ -8,8 +8,7 @@ import android.os.Looper
 import com.example.sportapp.R
 
 class SplashScreenActivity : AppCompatActivity() {
-//    private val delayBeforeFinish = 3000L
-    private val delayBeforeFinish = 0L // TODO change
+    private val delayBeforeFinish = 3000L
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,13 +20,5 @@ class SplashScreenActivity : AppCompatActivity() {
             finish()
         }, delayBeforeFinish)
 
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-    }
-
-    override fun onStop() {
-        super.onStop()
     }
 }

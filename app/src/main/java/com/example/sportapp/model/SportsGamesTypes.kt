@@ -1,4 +1,4 @@
-package com.example.sportapp
+package com.example.sportapp.model
 
 enum class SportsGamesTypes(val russianName: String) {
     FOOTBALL("Футбол"),

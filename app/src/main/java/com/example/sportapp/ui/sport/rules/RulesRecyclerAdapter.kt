@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.sportapp.RuleListItem
+import com.example.sportapp.model.RuleListItem
 import com.example.sportapp.databinding.RuleListItemBinding
 
 class RulesRecyclerAdapter(
