@@ -6,10 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.sportapp.GridImagesItemDecorator
-import com.example.sportapp.R
-import com.example.sportapp.SportGame
-import com.example.sportapp.SportsGamesTypes
+import com.example.sportapp.*
 import com.example.sportapp.databinding.ActivitySportsGamesBinding
 import com.example.sportapp.ui.sport.SportGameActivity
 
@@ -32,7 +29,7 @@ class SportsGamesActivity : AppCompatActivity(), SportsGamesRecyclerAdapter.OnSp
 
         binding.toolbar.title = "Спортивные игры"
         binding.sportGamesRecycler.layoutManager = GridLayoutManager(this, numberOfGridColumns)
-        binding.sportGamesRecycler.addItemDecoration(GridImagesItemDecorator(10, numberOfGridColumns))
+        binding.sportGamesRecycler.addItemDecoration(GridMenuItemDecorator(10, numberOfGridColumns))
         binding.sportGamesRecycler.adapter = adapter
     }
 

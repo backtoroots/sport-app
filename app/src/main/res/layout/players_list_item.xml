@@ -2,13 +2,13 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    >
+    android:layout_height="wrap_content" >
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/playerLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-<!--       TODO Изменить дизайн: изображение в roundimageview? картинки почередовать слева/справа-->
+
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/playerPhoto"
             android:layout_width="128dp"
@@ -40,6 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:textSize="24sp"
+            android:lines="1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/playerPhoto"

@@ -1,8 +1,10 @@
 package com.example.sportapp.ui.sport.gallery
 
+import android.content.res.Configuration
 import android.content.res.TypedArray
 import android.graphics.drawable.Drawable
 import android.os.Bundle
+import android.transition.TransitionInflater
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -19,7 +21,6 @@ class GalleryFragment : Fragment() {
     private lateinit var adapter: GalleryRecyclerAdapter
     private var _binding: FragmentGalleryBinding? = null
     private val binding get() = _binding!!
-    private val numberOfGridColumns = 3
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,6 +35,8 @@ class GalleryFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val numberOfGridColumns = if (resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT) 3 else 5
+
         _binding = FragmentGalleryBinding.inflate(inflater, container, false)
 
         activity?.title = "Галерея (${sportGame.russianName.toLowerCase(Locale.getDefault())})"
